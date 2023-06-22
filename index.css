@@ -6,6 +6,7 @@
     list-style: none;
     font-family: 'source Sans-serif', sans-serif;
     letter-spacing: 1px;
+    border: none;
 }
 .header{
     display: flex;
@@ -39,7 +40,7 @@ a{
     font-weight: 700;
 }
 li a:hover{
-    color: white;
+    color: #facf0f;
     text-decoration: underline greenyellow;
 }
 .top{
@@ -74,11 +75,16 @@ li a:hover{
 .top a{
     font-size: 18px;
     font-weight:800;
-    border-radius: 3px;
-    padding: 22px 78px;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 19px 66px;
     background-color: #facf0f;
+    color: white;
+    border: none;
 }
-.link-project{
+.project-link{
     margin-top: 70px;
 }
 .about{
@@ -151,7 +157,7 @@ li a:hover{
     margin: 6px;
     background-color:rgba(153,153,153,.2);
 }
-.link-contact a{
+.contact-list a{
     font-size: 16px;
     font-weight:800;
     border-radius: 3px;
@@ -160,18 +166,39 @@ li a:hover{
 }
 .project{
     padding-top: 100px;
+    background-color:rgba(153,153,153,.2);
 }
 .project p{
     line-height: 30px;
 }
+.projects-list{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px 10%;
+}
+.projects-list p{
+    line-height: 30px;
+}
+.projects-list h1{
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+.one{
+    width:500px;
+    height: 100%;
+}
 .contact{
-    background-image: linear-gradient(to right,rgba(245,245,245,.7),rgba(245,245,245,.7)),url(./headerbg.svg) ;
+    background-image: linear-gradient(to right,rgba(245,245,245,.7),rgba(245,245,245,.7)),url(./img/headerbg.svg) ;
     padding-top: 100px;
 }
 .contact p{
     line-height: 30px;
 }
 form {
+    display: relative;
     width: 65vw;
     margin: 0 auto;
     padding: 100px;
@@ -196,8 +223,26 @@ input, textarea{
   margin: 10px 0px 10px 20px;
   border-radius: 5px; 
 }
+button{
+    position: relative;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 19px 66px;
+    background-color: #facf0f;
+    color: white;
+    border: none;
+    margin: 80px auto 0 10px;
+    
+}
 .footer{
-    padding: 100px 15%;
+    padding: 100px 10%;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -215,4 +260,6 @@ input, textarea{
     line-height: 20px;
 
 }
-
+i{
+    padding-right: 10px;
+}
