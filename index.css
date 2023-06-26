@@ -46,20 +46,20 @@ li a:hover{
 .top{
     padding-top:1000px ;
     position: relative;
-    background-image: linear-gradient(to right,rgba(245,245,245,.7),rgba(245,245,245,.7)),url(./headerbg.svg) ;
+    background-image: linear-gradient(to right,rgba(245,245,245,.7),rgba(245,245,245,.7)),url(./img/headerbg.svg) ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
-    height: 100vh;
+    
 }
 .top-text{
     position: absolute;
-    top: 40%;
+    top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    padding-bottom: -600px;
+
 }
 .top-text h1{
     font-size: 2.2rem;
@@ -69,8 +69,11 @@ li a:hover{
     font-style: bold;
 }
 .top-text p{
-    font-size: 20px;
+    word-wrap: break-word;
+    font-size: 21px;
     padding-bottom: 10px;
+    line-height: 30px;
+    font-family: 'source Sans Pro', sans-serif;
 }
 .top a{
     font-size: 18px;
@@ -124,8 +127,9 @@ li a:hover{
 }
 .more{
     padding: 80px 10%;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8%;
     align-items: top;
     justify-content: space-between;
     margin-top: 20px;
@@ -136,6 +140,9 @@ li a:hover{
 .more .linkedin{
     color: #facf0f;
 }
+.more .linkedin:hover{
+    text-decoration: underline;
+}
 .more h1{
     font-size: 1.5rem;
     padding-bottom: 30px;
@@ -143,6 +150,9 @@ li a:hover{
 }
 .summary{
     margin-bottom: 30px;
+}
+.summary p{
+    word-wrap: break-word;
 }
 .skills{
     display: absolute;
@@ -157,13 +167,14 @@ li a:hover{
     margin: 6px;
     background-color:rgba(153,153,153,.2);
 }
-.contact-list a{
+.contact-link a{
     font-size: 16px;
     font-weight:800;
     border-radius: 3px;
     padding: 14px 49px;
     background-color: #facf0f;
 }
+
 .project{
     padding-top: 100px;
     background-color:rgba(153,153,153,.2);
@@ -172,19 +183,35 @@ li a:hover{
     line-height: 30px;
 }
 .projects-list{
-    display: flex;
-    flex-direction: row;
-    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:8%;
     align-items: center;
-    justify-content: space-around;
-    padding: 100px 10%;
+    justify-content: space-between;
+    padding: 100px 10%
+}
+.projects-list div{
+    text-align: center;
+    word-wrap:break-word;
 }
 .projects-list p{
     line-height: 30px;
+    text-align: center;
+    padding-bottom: 40px;
 }
 .projects-list h1{
+    text-align: center;
     line-height: 30px;
     padding-bottom: 20px;
+}
+.projects-list a{
+    text-align: center;
+    font-size: 16px;
+    font-weight:800;
+    border-radius: 3px;
+    padding: 14px 49px;
+    background-color: #facf0f;
+    margin-top: 20px;
 }
 .one{
     width:500px;
@@ -263,3 +290,35 @@ button{
 i{
     padding-right: 10px;
 }
+
+
+/*responsive*/
+
+@media only screen and (max-width:1220px) {
+    .top-text{
+        
+    }
+    .more{
+    padding: 80px 6%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:7%;
+    align-items: top;
+    justify-content: space-between;
+    margin-top: 20px;
+    }   
+    .skills p{
+    text-align: center;
+    border-radius: 5px;
+    color: #666;
+    padding: 9px 14px;
+    margin: 6px;
+    background-color:rgba(153,153,153,.2);  
+        
+    }
+    form {
+    width: 80%;
+    margin: 0 auto;
+    }
+}
+
